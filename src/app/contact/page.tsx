@@ -1,8 +1,9 @@
 import { ContactForm } from '@/components/contact/contact-form';
 import { Button } from '@/components/ui/button';
-import { INSTAGRAM_LINK, WHATSAPP_LINK } from '@/lib/constants';
+import { INSTAGRAM_LINK, TIKTOK_LINK, WHATSAPP_LINK } from '@/lib/constants';
 import { Instagram, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { TikTokIcon } from '@/components/icons/tiktok-icon';
 
 export default function ContactPage() {
   return (
@@ -50,6 +51,21 @@ export default function ContactPage() {
                <Button variant="outline" asChild>
                 <Link href={INSTAGRAM_LINK} target="_blank">
                   Follow on Instagram
+                </Link>
+              </Button>
+            </div>
+
+            <div className="border-t w-full"></div>
+            
+            <div>
+              <h3 className="text-lg font-semibold flex items-center">
+                <TikTokIcon className="mr-3 h-5 w-5 text-primary"/>
+                Watch My Process
+              </h3>
+              <p className="text-muted-foreground mt-2 mb-4">Join me on TikTok for creative videos and art inspiration.</p>
+               <Button variant="outline" asChild>
+                <Link href={TIKTOK_LINK} target="_blank">
+                  Follow on TikTok
                 </Link>
               </Button>
             </div>
